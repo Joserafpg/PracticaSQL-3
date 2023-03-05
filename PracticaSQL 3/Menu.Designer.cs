@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnUsuario = new System.Windows.Forms.Button();
-            this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnProducto = new System.Windows.Forms.Button();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnUsuario = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,16 +47,16 @@
             this.panel1.Size = new System.Drawing.Size(800, 110);
             this.panel1.TabIndex = 0;
             // 
-            // btnUsuario
+            // btnProducto
             // 
-            this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUsuario.Location = new System.Drawing.Point(38, 0);
-            this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Size = new System.Drawing.Size(150, 110);
-            this.btnUsuario.TabIndex = 0;
-            this.btnUsuario.Text = "Usuario";
-            this.btnUsuario.UseVisualStyleBackColor = true;
+            this.btnProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProducto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnProducto.Location = new System.Drawing.Point(610, 0);
+            this.btnProducto.Name = "btnProducto";
+            this.btnProducto.Size = new System.Drawing.Size(150, 110);
+            this.btnProducto.TabIndex = 2;
+            this.btnProducto.Text = "Producto";
+            this.btnProducto.UseVisualStyleBackColor = true;
             // 
             // btnRegistrar
             // 
@@ -68,17 +68,19 @@
             this.btnRegistrar.TabIndex = 1;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // btnProducto
+            // btnUsuario
             // 
-            this.btnProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProducto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnProducto.Location = new System.Drawing.Point(610, 0);
-            this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Size = new System.Drawing.Size(150, 110);
-            this.btnProducto.TabIndex = 2;
-            this.btnProducto.Text = "Producto";
-            this.btnProducto.UseVisualStyleBackColor = true;
+            this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUsuario.Location = new System.Drawing.Point(38, 0);
+            this.btnUsuario.Name = "btnUsuario";
+            this.btnUsuario.Size = new System.Drawing.Size(150, 110);
+            this.btnUsuario.TabIndex = 0;
+            this.btnUsuario.Text = "Usuario";
+            this.btnUsuario.UseVisualStyleBackColor = true;
+            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
             // 
             // Menu
             // 

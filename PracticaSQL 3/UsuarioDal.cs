@@ -19,7 +19,7 @@ namespace PracticaSQL_3
             try
             {
                 Conexion.opoencon();
-                SqlCommand comando = new SqlCommand(string.Format("Insert Into usurios(nombre,contrasena,consultar,registrar,su) values('{0}','{1}','{2}','{3}','{4}')",
+                SqlCommand comando = new SqlCommand(string.Format("Insert Into Usuario(Nombre,Contraseña,Consultar,Registrar,Su) values('{0}','{1}','{2}','{3}','{4}')",
                     pUsuario, pContrasena, consultar, registrar, su), Conexion.ObtenerConexion());
 
                 resultado = comando.ExecuteNonQuery();

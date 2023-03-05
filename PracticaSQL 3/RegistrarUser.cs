@@ -27,6 +27,11 @@ namespace PracticaSQL_3
                 else
                     MessageBox.Show("Nose pudo crear la cuenta");
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 

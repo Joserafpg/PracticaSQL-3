@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Practica_SQL_2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +24,18 @@ namespace PracticaSQL_3
             btnRegistrar.Enabled = Permisos.Registrar;
             btnProducto.Enabled = Permisos.Su;
             btnRegistrar.Enabled = Permisos.Su;
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            RegistrarUser formregister = new RegistrarUser();
+            formregister.Show();
+        }
+
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
         }
     }
 }
