@@ -22,8 +22,9 @@ namespace Practica_SQL_2
         {
 
             Datosget Alumno = new Datosget();
+            Alumno.Cedula = txtcedula.Text;
             Alumno.Nombre = txtNombre.Text;
-            Alumno.Apellido = txtApellido.Text;
+            Alumno.Telefono = txtTelefono.Text;
             Alumno.Direccion = txtDireccion.Text;
             Alumno.Fecha_Nac = txtFech.Value;
 
@@ -39,14 +40,15 @@ namespace Practica_SQL_2
                 MessageBox.Show("No se pudieron guardar los datos", "Error al guardar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
+            txtcedula.Clear();
             txtNombre.Clear();
-            txtApellido.Clear();
+            txtTelefono.Clear();
             txtDireccion.Clear();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            String query = "select Id, Nombre,Apellido,Direccion, Fecha_nacimiento from Alumnos where ";
+            String query = "select Cedula, Nombre, Telefono, Direccion, Fecha_nacimiento from Alumnos where ";
             if (btnbuscar.Text != "")
             {
                 query = query + "  ( nombre like '%" + txtbuscar.Text + "%')";
