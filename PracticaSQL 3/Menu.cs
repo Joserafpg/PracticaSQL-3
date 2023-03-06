@@ -24,8 +24,9 @@ namespace PracticaSQL_3
             btnRegistrar.Enabled = Permisos.Registrar;
             btnProducto.Enabled = Permisos.Su;
             btnRegistrar.Enabled = Permisos.Su;
+            btnUsuario.Enabled = Permisos.Su;
         }
-
+        
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             RegistrarUser formregister = new RegistrarUser();
@@ -36,6 +37,12 @@ namespace PracticaSQL_3
         {
             Form2 form2 = new Form2();
             form2.Show();
+        }
+
+        private void btnProducto_Click(object sender, EventArgs e)
+        {
+            Producto producto = new Producto();
+            producto.Show();
         }
     }
 }

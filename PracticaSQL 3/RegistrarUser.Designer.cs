@@ -180,7 +180,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "RegistrarUser";
-            this.Text = "Form2";
+            this.Text = "Registrar usuario";
             this.ResumeLayout(false);
             this.PerformLayout();
 

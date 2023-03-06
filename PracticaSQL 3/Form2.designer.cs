@@ -164,7 +164,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form2";
-            this.Text = "Form1";
+            this.Text = "Agregar nuevo cliente";
             ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -57,6 +57,7 @@
             this.btnProducto.TabIndex = 2;
             this.btnProducto.Text = "Producto";
             this.btnProducto.UseVisualStyleBackColor = true;
+            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
             // btnRegistrar
             // 
@@ -66,7 +67,7 @@
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(150, 110);
             this.btnRegistrar.TabIndex = 1;
-            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.Text = "Registrar usuarios";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
@@ -78,7 +79,7 @@
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Size = new System.Drawing.Size(150, 110);
             this.btnUsuario.TabIndex = 0;
-            this.btnUsuario.Text = "Usuario";
+            this.btnUsuario.Text = "Clientes";
             this.btnUsuario.UseVisualStyleBackColor = true;
             this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
             // 
@@ -89,7 +90,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Name = "Menu";
-            this.Text = "k";
+            this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

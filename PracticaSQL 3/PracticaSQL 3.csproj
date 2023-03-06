@@ -62,6 +62,12 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Permisos.cs" />
+    <Compile Include="Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Producto.Designer.cs">
+      <DependentUpon>Producto.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistrarUser.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -112,7 +112,7 @@
             this.Controls.Add(this.txtcontraseña);
             this.Controls.Add(this.txtusuario);
             this.Name = "Login";
-            this.Text = "Form1";
+            this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
