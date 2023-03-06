@@ -37,21 +37,21 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panel1.Controls.Add(this.btnProducto);
             this.panel1.Controls.Add(this.btnRegistrar);
             this.panel1.Controls.Add(this.btnUsuario);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 110);
+            this.panel1.Size = new System.Drawing.Size(800, 124);
             this.panel1.TabIndex = 0;
             // 
             // btnProducto
             // 
             this.btnProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProducto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnProducto.Location = new System.Drawing.Point(610, 0);
+            this.btnProducto.Location = new System.Drawing.Point(611, 3);
             this.btnProducto.Name = "btnProducto";
             this.btnProducto.Size = new System.Drawing.Size(150, 110);
             this.btnProducto.TabIndex = 2;
@@ -63,11 +63,11 @@
             // 
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRegistrar.Location = new System.Drawing.Point(325, 0);
+            this.btnRegistrar.Location = new System.Drawing.Point(325, 3);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(150, 110);
             this.btnRegistrar.TabIndex = 1;
-            this.btnRegistrar.Text = "Registrar usuarios";
+            this.btnRegistrar.Text = "Registrar ";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
@@ -75,11 +75,11 @@
             // 
             this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUsuario.Location = new System.Drawing.Point(38, 0);
+            this.btnUsuario.Location = new System.Drawing.Point(40, 3);
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Size = new System.Drawing.Size(150, 110);
             this.btnUsuario.TabIndex = 0;
-            this.btnUsuario.Text = "Clientes";
+            this.btnUsuario.Text = "Estudiantes";
             this.btnUsuario.UseVisualStyleBackColor = true;
             this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
             // 
