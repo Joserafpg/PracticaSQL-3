@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Practica_SQL_2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,6 +32,12 @@ namespace PracticaSQL_3
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Alluser alluser= new Alluser();
+            alluser.Show();
         }
     }
 }

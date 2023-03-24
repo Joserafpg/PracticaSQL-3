@@ -41,6 +41,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -94,7 +95,7 @@
             // chsuper
             // 
             this.chsuper.AutoSize = true;
-            this.chsuper.Location = new System.Drawing.Point(228, 285);
+            this.chsuper.Location = new System.Drawing.Point(566, 172);
             this.chsuper.Name = "chsuper";
             this.chsuper.Size = new System.Drawing.Size(91, 17);
             this.chsuper.TabIndex = 10;
@@ -104,7 +105,7 @@
             // chproductos
             // 
             this.chproductos.AutoSize = true;
-            this.chproductos.Location = new System.Drawing.Point(228, 248);
+            this.chproductos.Location = new System.Drawing.Point(566, 135);
             this.chproductos.Name = "chproductos";
             this.chproductos.Size = new System.Drawing.Size(74, 17);
             this.chproductos.TabIndex = 9;
@@ -114,7 +115,7 @@
             // chclientes
             // 
             this.chclientes.AutoSize = true;
-            this.chclientes.Location = new System.Drawing.Point(107, 285);
+            this.chclientes.Location = new System.Drawing.Point(445, 172);
             this.chclientes.Name = "chclientes";
             this.chclientes.Size = new System.Drawing.Size(63, 17);
             this.chclientes.TabIndex = 8;
@@ -124,7 +125,7 @@
             // chregistrar
             // 
             this.chregistrar.AutoSize = true;
-            this.chregistrar.Location = new System.Drawing.Point(107, 248);
+            this.chregistrar.Location = new System.Drawing.Point(445, 135);
             this.chregistrar.Name = "chregistrar";
             this.chregistrar.Size = new System.Drawing.Size(68, 17);
             this.chregistrar.TabIndex = 7;
@@ -133,7 +134,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(485, 97);
+            this.button1.Location = new System.Drawing.Point(174, 245);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(160, 50);
             this.button1.TabIndex = 11;
@@ -143,7 +144,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(485, 166);
+            this.button2.Location = new System.Drawing.Point(382, 245);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(160, 50);
             this.button2.TabIndex = 12;
@@ -161,11 +162,22 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Registrar usuario";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(608, 12);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 50);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "Usuarios";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // RegistrarUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(713, 322);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -201,5 +213,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button3;
     }
 }

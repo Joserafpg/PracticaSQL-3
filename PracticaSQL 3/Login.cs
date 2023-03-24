@@ -67,12 +67,9 @@ namespace PracticaSQL_3
             {
                 MessageBox.Show(" Usuario o contraseña Incorrecto");
                 txtcontraseña.Focus();
-
             }
 
             Conexion.cerrarcon();
-
-
         }
     }
 }

@@ -37,7 +37,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel1.Controls.Add(this.btnProducto);
             this.panel1.Controls.Add(this.btnRegistrar);
             this.panel1.Controls.Add(this.btnUsuario);
@@ -79,7 +79,7 @@
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Size = new System.Drawing.Size(150, 110);
             this.btnUsuario.TabIndex = 0;
-            this.btnUsuario.Text = "Estudiantes";
+            this.btnUsuario.Text = "Clientes";
             this.btnUsuario.UseVisualStyleBackColor = true;
             this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
             // 

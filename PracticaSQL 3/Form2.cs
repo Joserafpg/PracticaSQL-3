@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PracticaSQL_3;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,8 @@ namespace Practica_SQL_2
         {
             InitializeComponent();
         }
+
+        public Datosget AlumnoActual { get; set; }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -39,30 +42,60 @@ namespace Practica_SQL_2
             {
                 MessageBox.Show("No se pudieron guardar los datos", "Error al guardar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-
-            txtcedula.Clear();
-            txtNombre.Clear();
-            txtTelefono.Clear();
-            txtDireccion.Clear();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            String query = "select Cedula, Nombre, Telefono, Direccion, Fecha_nacimiento from Alumnos where ";
-            if (btnbuscar.Text != "")
+
+            Consultar pBuscar = new Consultar();
+            pBuscar.ShowDialog();
+            if (pBuscar.AlumnoSeleccionado != null)
             {
-                query = query + "  ( nombre like '%" + txtbuscar.Text + "%')";
+                AlumnoActual = pBuscar.AlumnoSeleccionado;
+                txtcedula.Text = pBuscar.AlumnoSeleccionado.Cedula;
+                txtNombre.Text = pBuscar.AlumnoSeleccionado.Nombre;
+                txtTelefono.Text = pBuscar.AlumnoSeleccionado.Telefono;
+                txtDireccion.Text = pBuscar.AlumnoSeleccionado.Direccion;
+                txtFech.Value = pBuscar.AlumnoSeleccionado.Fecha_Nac;
+
+                btnAgregar.Enabled = false;
+                btnModificar.Enabled = true;
+                btnEliminar.Enabled = true;
             }
+        }
 
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Datosget pAlumno = new Datosget();
+            pAlumno.Nombre = txtNombre.Text;
+            pAlumno.Telefono = txtTelefono.Text;
+            pAlumno.Cedula = txtcedula.Text;
+            pAlumno.Direccion = txtDireccion.Text;
+            pAlumno.Fecha_Nac = txtFech.Value;
+            pAlumno.Codigo = AlumnoActual.Codigo;
 
+            int Resultado = Datosbasedt.Modificar(pAlumno);
+            
+            if(Resultado > 0)
+            {
+                MessageBox.Show("Alumno Modificado con exito", "Alumno modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Limpiar();
+                btnEliminar.Enabled = false;
+                btnModificar.Enabled = false;
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("No se pudo modificar el alumno", "Ocurrio un error!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
 
-            Conexion.opoencon();
-            SqlCommand cmd = new SqlCommand(query, Conexion.ObtenerConexion());
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            dtgDatos.DataSource = ds.Tables[0];
-            Conexion.cerrarcon();
+        void Limpiar()
+        {
+            txtNombre.Clear();
+            txtcedula.Clear();
+            txtTelefono.Clear();
+            txtDireccion.Clear();
         }
     }
 }

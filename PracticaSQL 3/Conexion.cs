@@ -11,8 +11,7 @@ namespace Practica_SQL_2
 {
     public class Conexion
     {
-        private static SqlConnection Conn = new SqlConnection("Data source = DESKTOP-CDKTRK2; Initial Catalog=Escuela; Integrated Security=True");
-            
+        private static SqlConnection Conn = new SqlConnection("Data source = DESKTOP-NDDA7LS; Initial Catalog=Escuela; Integrated Security=True");
 
         public static SqlConnection ObtenerConexion()
         {           
@@ -30,7 +29,6 @@ namespace Practica_SQL_2
             {
                 MessageBox.Show(ex.ToString());
             }
-
         }
 
         public static void cerrarcon()
@@ -45,7 +43,6 @@ namespace Practica_SQL_2
                 catch (SqlException ex)
                 {
                     MessageBox.Show(ex.ToString());
-
                 }
             }
         }
