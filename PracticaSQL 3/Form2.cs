@@ -50,6 +50,8 @@ namespace Practica_SQL_2
             {
                 MessageBox.Show("No se pudieron guardar los datos", "Error al guardar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+
+            Limpiar();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -109,7 +111,7 @@ namespace Practica_SQL_2
         {
             if (MessageBox.Show("Esta seguro que desea eliminar estudiante actual??", "Esta Seguro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                int resultado = Datosbasedt.Eliminar(AlumnoActual.Codigo);
+                Int64 resultado = Datosbasedt.Eliminar((int)AlumnoActual.Codigo);
                 if (resultado > 0)
                 {
                     MessageBox.Show("Estudiantes eliminados", "Estudiante Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);

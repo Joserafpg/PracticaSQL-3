@@ -50,26 +50,25 @@ namespace Practica_SQL_2
             return retorno;
         }
 
-        public static List<Datosget> BuscarAlumnos(string pNombre, string pTelefono)
+        public static List<Datosget> BuscarAlumnos(string pCodigo, string pTelefono)
         {
             List<Datosget> lista = new List<Datosget>();
             Conexion.opoencon();
             {
 
-                SqlCommand comando = new SqlCommand(String.Format(
-                    "SELECT Codigo,Cedula, Nombre, Telefono, Direccion, Fecha_nacimiento FROM Alumnos where codigo like '%{0}%' and telefono like '%{1}%' ", pNombre, pTelefono), 
+                SqlCommand comando = new SqlCommand(String.Format("SELECT Codigo,Cedula, Nombre, Telefono, Direccion, Fecha_nacimiento FROM Alumnos where codigo like '%{0}%' and telefono like '%{1}%' ", pCodigo, pTelefono), 
                     Conexion.ObtenerConexion());
 
                 SqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
                     Datosget pAlumnos = new Datosget();
-                    pAlumnos.Codigo = reader.GetInt64(0);
+                    pAlumnos.Codigo = Convert.ToInt64(reader.GetValue(0));
                     pAlumnos.Cedula = reader.GetString(1);
                     pAlumnos.Nombre = reader.GetString(2);
                     pAlumnos.Telefono = reader.GetString(3);
                     pAlumnos.Direccion = reader.GetString(4);
-                    pAlumnos.Fecha_Nac = Convert.ToDateTime(reader.GetDateTime(5));
+                    pAlumnos.Fecha_Nac = Convert.ToDateTime(reader.GetValue(5));
 
                     lista.Add(pAlumnos);
                 }

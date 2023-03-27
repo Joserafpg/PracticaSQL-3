@@ -22,17 +22,7 @@ namespace PracticaSQL_3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (dtgdatos.SelectedRows.Count == 1)
-            {
-                Int64 codigo = Convert.ToInt64(dtgdatos.CurrentRow.Cells[0].Value);
-                AlumnoSeleccionado = Datosbasedt.ObtenerAlumnos(codigo);
-                this.Close();
-            }
 
-            else
-            {
-                MessageBox.Show("Aun no ha seleccionado ningun alumno");
-            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
