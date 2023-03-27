@@ -167,6 +167,7 @@
             this.btnEliminar.TabIndex = 14;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // Form2
             // 
@@ -189,6 +190,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form2";
             this.Text = "Agregar nuevo cliente";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

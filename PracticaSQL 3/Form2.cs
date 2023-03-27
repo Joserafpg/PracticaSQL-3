@@ -21,6 +21,14 @@ namespace Practica_SQL_2
 
         public Datosget AlumnoActual { get; set; }
 
+        void Limpiar()
+        {
+            txtNombre.Clear();
+            txtcedula.Clear();
+            txtTelefono.Clear();
+            txtDireccion.Clear();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -90,12 +98,35 @@ namespace Practica_SQL_2
             }
         }
 
-        void Limpiar()
+        
+        private void Form2_Load(object sender, EventArgs e)
         {
-            txtNombre.Clear();
-            txtcedula.Clear();
-            txtTelefono.Clear();
-            txtDireccion.Clear();
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Esta seguro que desea eliminar estudiante actual??", "Esta Seguro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                int resultado = Datosbasedt.Eliminar(AlumnoActual.Codigo);
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Estudiantes eliminados", "Estudiante Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Limpiar();
+                    btnEliminar.Enabled = false;
+                    btnModificar.Enabled = false;
+                    btnAgregar.Enabled = true;
+                }
+
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar al estudiantes", "Estudiantes eliminado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+
+            else
+                MessageBox.Show("Se cancelo la eliminacion", "Cancelado");
         }
     }
 }
