@@ -131,6 +131,7 @@
             this.txtFech.Name = "txtFech";
             this.txtFech.Size = new System.Drawing.Size(208, 20);
             this.txtFech.TabIndex = 5;
+            this.txtFech.Value = new System.DateTime(2023, 3, 27, 0, 0, 0, 0);
             // 
             // txtcedula
             // 
