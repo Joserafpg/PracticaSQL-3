@@ -84,16 +84,16 @@ namespace Practica_SQL_2
             {
                 Datosget pAlumno = new Datosget();
                 SqlCommand comando = new SqlCommand(string.Format(
-                   "select codigo, Nombre, Telefono, Cedula, Direccion, Fecha From Alumno where Codigo = {0}", pId), Conexion.ObtenerConexion());
+                   "select codigo, Nombre, Cedula, Telefono, Direccion, Fecha_nacimiento From Alumnos where Codigo = {0}", pId), Conexion.ObtenerConexion());
                 SqlDataReader reader = comando.ExecuteReader();
                 while(reader.Read())
                 {
-                    pAlumno.Codigo = reader.GetInt64(0);
+                    pAlumno.Codigo = Convert.ToInt64(reader.GetValue(0));
                     pAlumno.Nombre = reader.GetString(1);
                     pAlumno.Telefono = reader.GetString(2);
                     pAlumno.Cedula = reader.GetString(3);
                     pAlumno.Direccion = reader.GetString(4);
-                    pAlumno.Fecha_Nac = Convert.ToDateTime(reader.GetDateTimeOffset(5));
+                    pAlumno.Fecha_Nac = reader.GetDateTime(5);
                 }
                 Conexion.cerrarcon();
                 return pAlumno;
