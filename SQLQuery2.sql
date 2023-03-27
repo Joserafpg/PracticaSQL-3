@@ -8,7 +8,7 @@ Cedula varchar (50),
 Nombre varchar (50),
 Telefono varchar (50),
 Direccion text,
-Fecha_nacimiento nvarchar(50),
+Fecha_nacimiento date,
 )
 
 create table Usuario(
@@ -27,6 +27,7 @@ insert into Usuario (Nombre,Contraseña,Consultar,Registrar,Su)
 values('Yunior','1234','1','1','1')
 
 drop database Estudiantes;
+
 drop table Alumnos
 
 delete from Alumnos;
