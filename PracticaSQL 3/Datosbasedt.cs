@@ -31,15 +31,15 @@ namespace Practica_SQL_2
             int retorno = 0;
             Conexion.opoencon();
             {
-                SqlCommand comando = new SqlCommand(string.Format("update Alumnos set Cedulas= '{0}', Nombre= '{1}', Telefono= '{2}', Direccion= '{3}', Fecha_nacimiento= '{4}' where Codigo{4}",
-                    pAlumno.Cedula, pAlumno.Nombre, pAlumno.Telefono, pAlumno.Direccion, pAlumno.Fecha_Nac, pAlumno.Codigo), Conexion.ObtenerConexion());
+                SqlCommand comando = new SqlCommand(string.Format("update Alumnos set Cedula = '{0}', Nombre = '{1}', Telefono = '{2}', Direccion = '{3}', Fecha_nacimiento = '{4}' where Codigo = {5}",
+                    pAlumno.Cedula, pAlumno.Nombre, pAlumno.Telefono, pAlumno.Direccion, pAlumno.Fecha_Nac.ToString("yyyy-MM-dd HH:mm:ss"), pAlumno.Codigo), Conexion.ObtenerConexion());
                 retorno = comando.ExecuteNonQuery();
             }
             Conexion.cerrarcon();
             return retorno;
         }
 
-        public static int Eliminar (int pID)
+            public static int Eliminar (int pID)
         {
             int retorno = 0;
             Conexion.opoencon();
