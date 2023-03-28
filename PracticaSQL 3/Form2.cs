@@ -31,27 +31,34 @@ namespace Practica_SQL_2
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            Datosget Alumno = new Datosget();
-            Alumno.Cedula = txtcedula.Text;
-            Alumno.Nombre = txtNombre.Text;
-            Alumno.Telefono = txtTelefono.Text;
-            Alumno.Direccion = txtDireccion.Text;
-            Alumno.Fecha_Nac = txtFech.Value;
-
-            int resultado = Datosbasedt.Agregar(Alumno);
-
-            if (resultado > 0)
+            if (string.IsNullOrEmpty(txtcedula.Text) || string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtTelefono.Text) || string.IsNullOrEmpty(txtDireccion.Text) || string.IsNullOrEmpty(txtFech.Text))
             {
-                MessageBox.Show("Datos Guardados Corerectamente", "Datos Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Por favor, llene todos los campos antes de guardar los datos", "Campos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
             else
             {
-                MessageBox.Show("No se pudieron guardar los datos", "Error al guardar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
 
-            Limpiar();
+                Datosget Alumno = new Datosget();
+                Alumno.Cedula = txtcedula.Text;
+                Alumno.Nombre = txtNombre.Text;
+                Alumno.Telefono = txtTelefono.Text;
+                Alumno.Direccion = txtDireccion.Text;
+                Alumno.Fecha_Nac = txtFech.Value;
+
+                int resultado = Datosbasedt.Agregar(Alumno);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Datos Guardados Corerectamente", "Datos Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                else
+                {
+                    MessageBox.Show("No se pudieron guardar los datos", "Error al guardar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+                Limpiar();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
