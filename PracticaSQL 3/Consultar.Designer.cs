@@ -77,6 +77,7 @@
             this.dtgdatos.Name = "dtgdatos";
             this.dtgdatos.Size = new System.Drawing.Size(582, 189);
             this.dtgdatos.TabIndex = 4;
+            this.dtgdatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgdatos_CellContentClick);
             // 
             // txtbuscar
             // 

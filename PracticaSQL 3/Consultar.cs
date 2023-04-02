@@ -39,5 +39,10 @@ namespace PracticaSQL_3
         {
             dtgdatos.DataSource = Datosbasedt.BuscarAlumnos(txtcodigo.Text, txttelefono.Text);
         }
+
+        private void dtgdatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
