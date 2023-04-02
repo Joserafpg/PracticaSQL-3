@@ -11,7 +11,7 @@ namespace Practica_SQL_2
 {
     public class Conexion
     {
-        private static SqlConnection Conn = new SqlConnection("Data source = DESKTOP-NDDA7LS; Initial Catalog=Escuela; Integrated Security=True");
+        private static SqlConnection Conn = new SqlConnection("Data source = DESKTOP-CDKTRK2; Initial Catalog=Escuela; Integrated Security=True");
 
         public static SqlConnection ObtenerConexion()
         {           

@@ -77,7 +77,6 @@
             this.dtgdatos.Name = "dtgdatos";
             this.dtgdatos.Size = new System.Drawing.Size(582, 189);
             this.dtgdatos.TabIndex = 4;
-            this.dtgdatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgdatos_CellContentClick);
             // 
             // txtbuscar
             // 
@@ -113,6 +112,7 @@
             this.Controls.Add(this.txtcodigo);
             this.Name = "Consultar";
             this.Text = "Consultar";
+            this.Load += new System.EventHandler(this.Consultar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgdatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
